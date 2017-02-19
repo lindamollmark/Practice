@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class Main {
+public class LongestWordInSentence {
 
     public static void main(String[] args) {
         String sentence = "Detta är en riktigt lång mening";
