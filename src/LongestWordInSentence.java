@@ -5,21 +5,13 @@ import java.util.List;
 
 public class LongestWordInSentence {
 
-    public static void main(String[] args) {
-        String sentence = "Detta är en riktigt lång mening";
-        String longestWord = getLongestWordOutOfSentence(sentence);
-        System.out.println("Längsta ordet i meningen är enligt loop : " + longestWord);
-        String longestStreamWord = getLongestWordWithStreams(sentence);
-        System.out.println("Längsta ordet i meningen är enligt streams : " + longestStreamWord);
-    }
-
-    private static String getLongestWordWithStreams(String sentence) {
+    public String getLongestWordWithStreams(String sentence) {
         List<String> wordList = Arrays.asList(sentence.split("\\s+"));
         String longest = wordList.stream().max(Comparator.comparing(word -> word.length())).get();
         return longest;
     }
 
-    private static String getLongestWordOutOfSentence(String sentence) {
+    public String getLongestWordOutOfSentence(String sentence) {
         String[] words = sentence.split("\\s+");
         String longestWord = "";
         for (String word : words) {
